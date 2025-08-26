@@ -1,0 +1,9 @@
+<!-- library_member/static/src/xml/loan_counter_template.xml -->
+<templates id="template" xml:space="preserve">
+  <t t-name="library_member.LoanCounter">
+    <div class="o_widget_loan_counter" style="padding: 10px; background: #f0f8ff; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; text-align: center;" t-on-click="onClick">
+      <strong>Libros Prestados:</strong>
+      <span t-esc="loanCount" />
+    </div>
+  </t>
+</templates>
