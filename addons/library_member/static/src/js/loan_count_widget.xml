@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="library_member.LoanCountWidget">
+        <div class="o_loan_count_widget" t-on-click="onClick">
+            <span class="o_loan_count_value" t-esc="state.loanCount"/>
+            <span class="o_loan_count_label"> books on loan</span>
+        </div>
+    </t>
+</templates>
