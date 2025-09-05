@@ -11,8 +11,8 @@ class library_member(models.Model):
     count = fields.Integer()
     value = fields.Float(compute="_value_pc", store=True)
     description = fields.Text()
-    @api.depends('value')
+    @api.depends('count')
     def _value_pc(self):
         for record in self:
-            record.value2 = float(record.value) / 100
+            record.value = float(record.count) / 100
 

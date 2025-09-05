@@ -18,7 +18,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="library_member.action_window">
-      <field name="name">library_member</field>
+      <field name="name">library_member v1</field>
       <field name="res_model">library_member.library_member</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -46,8 +46,8 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Interface 1" id="library_member.menu_1" parent="library_member.menu_root" />
-    <menuitem name="Interface" id="library_member.menu_2" parent="library_member.menu_root" />
+    <menuitem name="Menu 1" id="library_member.menu_1" parent="library_member.menu_root" />
+    <menuitem name="Menu 2" id="library_member.menu_2" parent="library_member.menu_root" />
 
     <!-- actions -->
 

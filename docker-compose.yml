@@ -27,9 +27,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - odoo-db-data:/var/lib/postgresql/data
+      - ./odoo-db-data:/var/lib/postgresql/data
     restart: always
 
 volumes:
   odoo-web-data:
-  odoo-db-data:
