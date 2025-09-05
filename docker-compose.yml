@@ -1,5 +1,6 @@
 services:
   odoo:
+    container_name: odoo
     image: odoo:17.0
     depends_on:
       - db
@@ -14,7 +15,7 @@ services:
       - HOST=db
       - USER=odoo
       - PASSWORD=odoo
-    command: odoo -d odoo --db_user=odoo --db_password=odoo -i base
+    command: odoo -d odoo --db_user=odoo --db_password=odoo -i base && odoo --dev=all -d odoo
     restart: always
 
   db:

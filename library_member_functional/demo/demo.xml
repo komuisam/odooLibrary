@@ -1,0 +1,30 @@
+<odoo>
+  <data>
+
+    <record id="libro0" model="library_member.library_member">
+      <field name="name">libro 0</field>
+      <field name="value">0</field>
+    </record>
+
+    <record id="libro1" model="library_member.library_member">
+      <field name="name">libro 1</field>
+      <field name="value">10</field>
+    </record>
+
+    <record id="libro2" model="library_member.library_member">
+      <field name="name">libro 2</field>
+      <field name="value">20</field>
+    </record>
+
+    <record id="libro3" model="library_member.library_member">
+      <field name="name">libro 3</field>
+      <field name="value">30</field>
+    </record>
+
+    <record id="libro4" model="library_member.library_member">
+      <field name="name">libro 4</field>
+      <field name="value">40</field>
+    </record>
+
+  </data>
+</odoo>
