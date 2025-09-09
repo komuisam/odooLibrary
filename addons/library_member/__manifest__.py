@@ -18,18 +18,17 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base',"web"],
 
     # always loaded
-    'data': [
+   'data': [
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/library_member_views.xml',
+        'views/library_loan_views.xml', 
+        'views/library_book_views.xml',
+        'views/library_menu_views.xml',  
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+   
     'installable': True,
     'application': True,
 }

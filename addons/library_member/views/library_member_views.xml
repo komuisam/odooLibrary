@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_partner_form_inherit_library" model="ir.ui.view">
+    <field name="name">res.partner.form.inherit.library</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+      <!-- Agrega los campos en una posición existente -->
+      <xpath expr="//page[@name='internal_notes']" position="before">
+        <page string="Biblioteca">
+          <group string="Información de Miembro">
+            <field name="loaned_books_count" widget="statinfo" string="Libros Prestados"/>
+            <field name="loan_ids" widget="many2many"/>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>
+
