@@ -2,17 +2,15 @@
 
 from odoo import models, fields, api
 
+class LibraryMember(models.Model):
+    _inherit = 'res.partner'  # Extiende el modelo de contactos de Odoo
 
-class library_member(models.Model):
-    _name = 'library_member.library_member'
-    _description = 'library_member.library_member'
-
-    title = fields.Char()
+    title = fields.Many2one('res.partner.title')
     count = fields.Integer()
     value = fields.Float(compute="_value_pc", store=True)
     description = fields.Text()
+
     @api.depends('count')
     def _value_pc(self):
         for record in self:
             record.value = float(record.count) / 100
-
