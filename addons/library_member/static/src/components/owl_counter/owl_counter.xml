@@ -1,0 +1,8 @@
+<templates>
+  <t t-name="library_member.OwlCounter">
+    <div class="o_owl_counter" t-on-click="onClick" style="cursor: pointer; padding: 12px; background-color: #e3f2fd; border: 1px solid #2196f3; border-radius: 5px; margin: 10px 0; display: inline-block; font-weight: bold;">
+      📚 Libros por Prestados:
+      <t t-esc="props.count" />
+    </div>
+  </t>
+</templates>

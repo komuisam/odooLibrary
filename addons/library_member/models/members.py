@@ -1,25 +1,20 @@
 # -*- coding: utf-8 -*-
-
 from odoo import models, fields, api
 
 class LibraryMember(models.Model):
-    _inherit = 'res.partner'  # Extiende el modelo de contactos de Odoo
+    _inherit = 'res.partner'
 
-    # Campo para identificar si es miembro de la biblioteca
     is_library_member = fields.Boolean(string="Es Miembro de Biblioteca", default=False)
 
-    # Campo para contar libros prestados
     loaned_books_count = fields.Integer(
         string="Libros Prestados",
         compute="_compute_loaned_books_count",
         store=False,
-        help="Número total de libros prestados a este miembro"
     )
 
-    # Relación con préstamos
     loan_ids = fields.One2many(
         'library.loan',
-        'member_id',
+        'member_id',  
         string="Préstamos"
     )
 
@@ -27,3 +22,5 @@ class LibraryMember(models.Model):
     def _compute_loaned_books_count(self):
         for member in self:
             member.loaned_books_count = len(member.loan_ids)
+
+#####################################################

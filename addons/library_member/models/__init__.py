@@ -3,3 +3,4 @@
 from . import models
 from . import loan
 from . import book  
+from . import members  

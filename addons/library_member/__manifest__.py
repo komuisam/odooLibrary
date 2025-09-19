@@ -1,35 +1,32 @@
-# -*- coding: utf-8 -*-
 {
     'name': "library_member",
-
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
-
-    'description': """
-Long description of module's purpose
-    """,
-
+    'summary': "Gestión de miembros de biblioteca con componente OWL",
+    'description': "Módulo para gestionar miembros que heredan de res.partner y muestran un contador OWL.",
     'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
+    'website': "",
     'category': 'Uncategorized',
     'version': '0.1',
+    'depends': ['base', "web"],
 
-    # any module necessary for this one to work correctly
-    'depends': ['base',"web"],
-
-    # always loaded
-   'data': [
+    'data': [
         'security/ir.model.access.csv',
+        'views/action_library_members.xml',
         'views/library_member_views.xml',
-        'views/library_loan_views.xml', 
+        'views/library_loan_views.xml',
         'views/library_book_views.xml',
-        'views/library_menu_views.xml',  
+        'views/library_menu_views.xml',
     ],
-   
+
+    'assets': {
+        'web.assets_backend': [
+            'library_member/static/src/components/owl_counter/owl_counter.js',
+            'library_member/static/src/js/owl_counter_loader.js',
+        ],
+        'web.assets_qweb': [
+            'library_member/static/src/components/owl_counter/owl_counter.xml',
+        ],
+    },
+
     'installable': True,
     'application': True,
 }
-

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Menú principal de biblioteca -->
-    <menuitem id="menu_library_main" name="Biblioteca" sequence="10"/>
+  <!-- Menú principal de biblioteca -->
+  <menuitem id="menu_library_main" name="Biblioteca" sequence="10" />
 
-    <!-- Menú para libros -->
-    <menuitem id="menu_library_book" name="Libros" action="action_library_book" parent="menu_library_main" sequence="20"/>
+  <!-- Menú para libros -->
+  <menuitem id="menu_library_book" name="Libros" action="action_library_book" parent="menu_library_main" sequence="20" />
 
-    <!-- Menú para préstamos -->
-    <menuitem id="menu_library_loan" name="Préstamos" action="action_library_loan" parent="menu_library_main" sequence="30"/>
+  <!-- Menú para préstamos -->
+  <menuitem id="menu_library_loan" name="Préstamos" action="action_library_loan" parent="menu_library_main" sequence="30" />
+
+  <!-- Menú para miembros (COMENTADO TEMPORALMENTE) -->
+  <menuitem id="menu_library_members" name="Members" action="action_library_members" parent="menu_library_main" sequence="30" />
 </odoo>
